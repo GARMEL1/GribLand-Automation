@@ -51,7 +51,7 @@ int main() {
     bool hKeyState = false;      
     HWND currentWindow = GetForegroundWindow();  
 
-    cout << "Нажмите клавишу 'H' для старта и паузы скрипта." << endl;
+    cout << "Нажмите клавишу 'F6' для старта и паузы скрипта." << endl;
 
    
     setvbuf(stdout, NULL, _IONBF, 0);
@@ -65,7 +65,7 @@ int main() {
             scriptRunning = false;  
         }
 
-        if ((GetAsyncKeyState('H') & 0x8001) != 0) {  
+        if ((GetAsyncKeyState(VK_F6) & 0x8001) != 0) {  
             if (!hKeyState) {
                 hKeyState = true;
 
